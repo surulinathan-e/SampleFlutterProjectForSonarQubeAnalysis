@@ -1,0 +1,48 @@
+{
+    "project_info": {
+      "project_number": "151458347897",
+      "project_id": "task-management-12926",
+      "storage_bucket": "task-management-12926.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:151458347897:android:453ddbd9edb4b8df6fcda8",
+          "android_client_info": {
+            "package_name": "com.toolagen.tasko"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCrzb8vO-EV6PRLI7wJaL583bG1DPLAWbQ"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      },
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:151458347897:android:f5053f216e3b6ce96fcda8",
+          "android_client_info": {
+            "package_name": "com.toolagen.tasko.dev"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCrzb8vO-EV6PRLI7wJaL583bG1DPLAWbQ"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
