@@ -1,0 +1,29 @@
+name: SonarCloud Analysis
+
+on:
+  push:
+    branches:
+      - main  # or your main branch
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Shallow clones are problematic, ensuring full history is available.
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Analyze code
+        run: flutter analyze --reporter json > sonar_report.json
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to trigger PR decoration
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Use a repository secret
