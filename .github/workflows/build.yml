@@ -20,6 +20,8 @@ jobs:
           channel: 'stable'
       - name: Install dependencies
         run: flutter pub get
+      - name: Generate/build mutlingual
+        run: flutter gen-l10n
       - name: Analyze code
         run: flutter analyze --reporter json > sonar_report.json
       - name: SonarCloud Scan
